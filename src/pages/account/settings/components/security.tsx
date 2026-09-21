@@ -11,7 +11,7 @@ const passwordStrength = {
 
 const securityData = [
   {
-    title: '账户密码',
+    title: 'Hexby E2E test',
     description: (
       <>
         当前密码强度：
