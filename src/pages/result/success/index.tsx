@@ -65,7 +65,7 @@ const Success: React.FC = () => {
   );
   const content = (
     <>
-      <Descriptions title="Project Name" items={descriptionItems} />
+      <Descriptions title="Project details" items={descriptionItems} />
       <br />
       <Steps
         type="dot"
@@ -126,7 +126,7 @@ const Success: React.FC = () => {
       <Card variant="borderless">
         <Result
           status="success"
-          title="Submitted Successfully"
+          title="Submission complete"
           subTitle='The submission result page is used to give feedback on the processing results of a series of operational tasks. For simple operations, a global Message prompt is enough. This text area can show a brief supplementary note; if you need to display something like a "document", the gray area below can present more complex content.'
           extra={extra}
           style={{
