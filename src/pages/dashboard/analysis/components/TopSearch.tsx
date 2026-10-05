@@ -9,8 +9,8 @@ import Trend from './Trend';
 
 const renderSearchUserSubtitle = () => (
   <span>
-    搜索用户数
-    <Tooltip title="指标说明">
+    Search Users
+    <Tooltip title="Metric Description">
       <InfoCircleOutlined
         style={{
           marginLeft: 8,
@@ -22,8 +22,8 @@ const renderSearchUserSubtitle = () => (
 
 const renderAverageSearchSubtitle = () => (
   <span>
-    人均搜索次数
-    <Tooltip title="指标说明">
+    Searches per User
+    <Tooltip title="Metric Description">
       <InfoCircleOutlined
         style={{
           marginLeft: 8,
@@ -47,18 +47,18 @@ const TopSearch = ({
   const dropdownGroup = renderDropdownGroup();
   const columns = [
     {
-      title: '排名',
+      title: 'Rank',
       dataIndex: 'index',
       key: 'index',
     },
     {
-      title: '搜索关键词',
+      title: 'Search Keyword',
       dataIndex: 'keyword',
       key: 'keyword',
       render: (text: React.ReactNode) => <a href="/">{text}</a>,
     },
     {
-      title: '用户数',
+      title: 'Users',
       dataIndex: 'count',
       key: 'count',
       sorter: (
@@ -71,7 +71,7 @@ const TopSearch = ({
       ) => a.count - b.count,
     },
     {
-      title: '周涨幅',
+      title: 'Weekly Change',
       dataIndex: 'range',
       key: 'range',
       sorter: (
@@ -104,7 +104,7 @@ const TopSearch = ({
     <Card
       loading={loading}
       variant="borderless"
-      title="线上热门搜索"
+      title="Online Popular Searches"
       extra={dropdownGroup}
       style={{
         height: '100%',
