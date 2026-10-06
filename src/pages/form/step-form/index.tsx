@@ -24,6 +24,7 @@ const StepDescriptions: React.FC<{
   stepData: StepDataType;
   bordered?: boolean;
 }> = ({ stepData, bordered }) => {
+  const { styles } = useStyles();
   const { payAccount, receiverAccount, receiverName, amount } = stepData;
   const items = [
     { key: 'payAccount', label: '付款账户', children: payAccount },
@@ -35,13 +36,27 @@ const StepDescriptions: React.FC<{
       children: (
         <Statistic
           value={amount}
-          suffix={<span style={{ fontSize: 14 }}>元</span>}
+          prefix={<span className={styles.amountAffix}>¥</span>}
+          suffix={<span className={styles.amountAffix}>元</span>}
           precision={2}
+          classNames={{ content: styles.amount }}
         />
       ),
     },
   ];
-  return <Descriptions column={1} bordered={bordered} items={items} />;
+  return (
+    <Descriptions
+      column={1}
+      size="medium"
+      bordered={bordered}
+      items={items}
+      className={styles.descriptions}
+      classNames={{
+        label: styles.descriptionsLabel,
+        content: styles.descriptionsContent,
+      }}
+    />
+  );
 };
 const StepResult: React.FC<{
   onFinish: () => Promise<void>;
