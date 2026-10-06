@@ -47,7 +47,7 @@ const Success: React.FC = () => {
     >
       <div
         style={{
-          margin: '8px 0 4px',
+          margin: '16px 0 4px',
         }}
       >
         <span>Zhou Maomao</span>
